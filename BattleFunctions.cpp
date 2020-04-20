@@ -4,13 +4,14 @@
 #include <cstdlib>
 #include <time.h>
 #include "BattleFunctions.h"
+#include "Random.h"
 
 using namespace std;
 
 void Weapon::DisplayWeaponHitInfo() {
-	srand(time(NULL));
+	//srand(time(NULL));
 	int x;
-	int AP = (rand() % 10 + 1);
+	int AP = Random::Int(1, 10);
 	cout << "Gunblade does " << AP << " damage!" << endl;
 	y++;
 }
